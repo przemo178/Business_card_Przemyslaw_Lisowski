@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Przemysław Lisowski</title>
+    <link rel="icon" type="image/x-icon" href="/img/fox_favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark py-4 fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="#home">Home</a>
+                    <a class="nav-link" href="#about">O mnie</a>
+                    <a class="nav-link" href="#projects">Projekty</a>
+                    <a class="nav-link" href="#contact">Kontakt</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="home">
+        <div class="team text-black">
+            <img src="img/me2.png" alt="Przemysław Lisowski" class="color">
+            <img src="img/me2a.png" alt="Przemysław Lisowski szary" class="gray">
+            <div class="member">
+                <h1>Przemysław Lisowski</h1>
+                <h2>Front-End Developer</h2>
+                <a href="#about" class="btn btn-outline-light">poznaj mnie</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- <script>
+        //Parametry
+        let activeElement = 0;
+        const timeChange = 1000;
+        // Pobieramy 4 elementy na których pracujemy
+        const colorImgHtml = document.querySelector('.color');
+        const grayImgHtml = document.querySelector('.gray');
+        const h1Html = document.querySelector('.member h1');
+        const h2Html = document.querySelector('.member h2');
+
+        //Informacje w tablicach o elementach podmienianych
+        //   const colorImages = ['img/s1.png', 'img/s2.png', 'img/s3.png'];
+        const colorImages = ['img/me2.png'];
+        //   const grayImages = ['img/s1a.png', 'img/s2a.png', 'img/s3a.png'];
+        const grayImages = ['img/me2a.png'];
+        // const names = ['Anna Baugart', 'Marek Feliksiak', 'Arek Pawłowicz'];
+        const names = ['Przemysław Lisowski'];
+        // const professions = ['Programistka JS', 'UX i UI Designer', 'Front-End Developer'];
+        const professions = ['Front-End Developer'];
+
+        function changeElement() {
+            console.log("automatyczne wywołanie")
+            activeElement++;
+            if (activeElement == colorImages.length) {
+                activeElement = 0;
+            }
+            colorImgHtml.src = colorImages[activeElement];
+            grayImgHtml.src = grayImages[activeElement];
+            h1Html.textContent = names[activeElement];
+            h2Html.textContent = professions[activeElement];
+
+        }
+
+        setInterval(changeElement, timeChange)
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const nav = document.querySelector('.navbar-collapse')
+
+        document.addEventListener('click', () => {
+            if (nav.classList.contains('show')) {
+                nav.classList.remove('show')
+            }
+        })
+    </script>
+</body>
+
+</html>
