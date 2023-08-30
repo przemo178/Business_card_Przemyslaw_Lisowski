@@ -17,12 +17,12 @@ body {
 }
 
 [id] {
-  scroll-margin-top: 84px;
+  scroll-margin-top: 46px;
 }
 
 @media (min-width: 992px) {
   [id] {
-    scroll-margin-top: 69px;
+    scroll-margin-top: 47px;
   }
 }
 
