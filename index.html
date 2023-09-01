@@ -74,8 +74,8 @@
 
     <section class="about-info about-shadow border-top border-bottom">
         <div class="container-fluid">
-            <div class="row m-0 justify-content-center">
-                <div class="col-lg-3 py-5 about-text about-text-left">
+            <div class="row m-0 justify-content-center wrapper">
+                <div class="col-lg-3 py-5 about-text about-text-left reveal">
                     <h3>pasja / nauka</h3>
                     <p>W chwili obecnej każdą wolną chwilę poświęcam na zgłębianiu wiedzy z programowania front-end.
                         Stało się to moją pasją i bardzo mi się to podoba. Kilka miesięcy wcześniej zacząłem od HTML
@@ -85,9 +85,10 @@
                         Skupiamy się narazie na podstawach. Na ile mi czas pozwala staram sie robić ćwiczenia i projekty
                         z kusrów na Udemy oraz YouTube.</p>
                 </div>
-                <img src="./img/about/idea.jpg" alt="Mokra żarówka" class="d-lg-none about-img">
-                <img src="./img/about/idea.jpg" alt="Mokra żarówka" class="d-none d-lg-block col-lg-4 about-img">
-                <div class="col-lg-3 py-5 about-text about-text-right">
+                <img src="./img/about/idea.jpg" alt="Żarówka LED z karteczkami" class="d-lg-none about-img reveal">
+                <img src="./img/about/idea.jpg" alt="Żarówka LED z karteczkami"
+                    class="d-none d-lg-block col-lg-4 about-img reveal">
+                <div class="col-lg-3 py-5 about-text about-text-right reveal">
                     <h3>cele</h3>
                     <p>W przyszłości mam zamiar zmienić moją dotychczasową pracę i zacząć programować zawodowo. Jest to
                         mój cel. Podstawy już jakieś znam, chciałbym zacząć pracować dla kogoś, aby co najmniej przez te
@@ -100,47 +101,63 @@
         </div>
     </section>
 
+    <section class="carousel">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner text-light text-center">
+                <div class="carousel-item carousel-img-one active">
+                    <div
+                        class="carousel-caption h-100 p-5 d-flex flex-column justify-content-center align-items-center">
+                        <p class="display-6">Technologie i frameworki, z których korzystam:</p>
+                        <!-- <p class="display-3 d-none d-sm-block">HTML & CSS</p> -->
+                        <p class="display-3">HTML & CSS</p>
+                    </div>
+                    <div class="hero-shadow"></div>
+                </div>
+                <div class="carousel-item carousel-img-two">
+                    <div
+                        class="carousel-caption h-100 p-5 d-flex flex-column justify-content-center align-items-center">
+                        <p class="display-6">Technologie i frameworki, z których korzystam:</p>
+                        <p class="display-3">Bootstarp</p>
+                    </div>
+                    <div class="hero-shadow"></div>
+                </div>
+                <div class="carousel-item carousel-img-three">
+                    <div
+                        class="carousel-caption h-100 p-5 d-flex flex-column justify-content-center align-items-center">
+                        <p class="display-6">Technologie i frameworki, z których korzystam:</p>
+                        <p class="display-3">JS & Angular</p>
+                    </div>
+                    <div class="hero-shadow"></div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+
+
 
     <!-- <a href="https://storyset.com/people">People illustrations by Storyset</a> -->
 
 
-
-
-    <!-- <script>
-        //Parametry
-        let activeElement = 0;
-        const timeChange = 1000;
-        // Pobieramy 4 elementy na których pracujemy
-        const colorImgHtml = document.querySelector('.color');
-        const grayImgHtml = document.querySelector('.gray');
-        const h1Html = document.querySelector('.member h1');
-        const h2Html = document.querySelector('.member h2');
-
-        //Informacje w tablicach o elementach podmienianych
-        //   const colorImages = ['img/s1.png', 'img/s2.png', 'img/s3.png'];
-        const colorImages = ['img/me2.png'];
-        //   const grayImages = ['img/s1a.png', 'img/s2a.png', 'img/s3a.png'];
-        const grayImages = ['img/me2a.png'];
-        // const names = ['Anna Baugart', 'Marek Feliksiak', 'Arek Pawłowicz'];
-        const names = ['Przemysław Lisowski'];
-        // const professions = ['Programistka JS', 'UX i UI Designer', 'Front-End Developer'];
-        const professions = ['Front-End Developer'];
-
-        function changeElement() {
-            console.log("automatyczne wywołanie")
-            activeElement++;
-            if (activeElement == colorImages.length) {
-                activeElement = 0;
-            }
-            colorImgHtml.src = colorImages[activeElement];
-            grayImgHtml.src = grayImages[activeElement];
-            h1Html.textContent = names[activeElement];
-            h2Html.textContent = professions[activeElement];
-
-        }
-
-        setInterval(changeElement, timeChange)
-    </script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
@@ -150,15 +167,6 @@
 
     <script src="./src/code.js"></script>
 
-    <!-- <script>
-        const nav = document.querySelector('.navbar-collapse')
-
-        document.addEventListener('click', () => {
-            if (nav.classList.contains('show')) {
-                nav.classList.remove('show')
-            }
-        })
-    </script> -->
 </body>
 
 </html>

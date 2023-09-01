@@ -16,6 +16,16 @@ body {
   background-image: linear-gradient(to left, #434343 0%, black 100%);
 }
 
+.hero-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
 [id] {
   scroll-margin-top: 46px;
 }
@@ -106,12 +116,13 @@ body {
 }
 
 .about-top .about-content {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   text-align: justify;
 }
 
 .about-info p {
   font-size: 1.6rem;
+  text-shadow: 0 0 1px black;
 }
 
 .about-text {
@@ -133,6 +144,46 @@ body {
 .about-img {
   height: 300px;
   object-fit: cover;
+  /* box-shadow: 0 0 10px black; */
+}
+
+.reveal {
+  opacity: 0;
+  /* transform: translateY(150px); */
+  filter: blur(10%);
+  transform: translateX(-100vw);
+  transition: all 2s ease;
+}
+
+.active {
+  opacity: 1;
+  filter: blur(0);
+  /* transform: translateY(0); */
+  transform: translateX(0);
+}
+
+/* carousel */
+
+header {
+  font-size: 2rem;
+}
+
+.carousel-item {
+  position: relative;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.carousel-img-one {
+  background-image: url("../img/about/main-carousel-1.jpg");
+}
+.carousel-img-two {
+  background-image: url("../img/about/main-carousel-2.jpg");
+}
+.carousel-img-three {
+  background-image: url("../img/about/main-carousel-3.jpg");
 }
 
 @media (min-width: 992px) {
@@ -141,12 +192,12 @@ body {
   }
 
   .about-shadow {
-    box-shadow: inset 0 5px 10px -5px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 15px 10px -5px rgba(0, 0, 0, 0.4);
   }
 
   .about-text {
     padding: 5em 0;
-    transform: skew(-15deg);
+    /* transform: skew(-15deg); */
   }
 
   .about-text-left {
@@ -161,6 +212,20 @@ body {
 
   .about-img {
     height: auto;
+    transform: skew(-15deg);
+  }
+
+  .reveal {
+    opacity: 0;
+    filter: blur(10%);
+    transform: translateX(-100vw);
+    transition: all 2s ease;
+  }
+
+  .active {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
     transform: skew(-15deg);
   }
 }
