@@ -155,7 +155,7 @@ body {
   transition: all 2s ease;
 }
 
-.active {
+.show {
   opacity: 1;
   filter: blur(0);
   /* transform: translateY(0); */
@@ -184,6 +184,10 @@ header {
 }
 .carousel-img-three {
   background-image: url("../img/about/main-carousel-3.jpg");
+}
+
+.carousel-item .carousel-item-span-two {
+  color: #8612fb;
 }
 
 @media (min-width: 992px) {
@@ -222,7 +226,7 @@ header {
     transition: all 2s ease;
   }
 
-  .active {
+  .show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);

@@ -18,10 +18,10 @@ function reveal() {
         let revealPoint = 100;
 
         if (revealTop < windowHeight - revealPoint) {
-            reveals[i].classList.add('active');
+            reveals[i].classList.add('show');
         }
         else {
-            reveals[i].classList.remove('active');
+            reveals[i].classList.remove('show');
         }
     }
 }
