@@ -174,6 +174,7 @@ header {
   background-position: center;
   background-size: cover;
   z-index: 0;
+  border-bottom: 2px solid white;
 }
 
 .carousel-img-one {
@@ -188,6 +189,50 @@ header {
 
 .carousel-item .carousel-item-span-two {
   color: #8612fb;
+}
+
+.carousel-item .carousel-item-span-three {
+  color: #bf4080;
+}
+
+/* projects */
+
+.projects-info .projects-info-content {
+  font-size: 1.6rem;
+  /* text-shadow: 0 0 1px black; */
+}
+
+.projects-info .btn {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+/* contact */
+
+.contact h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.6rem;
+}
+
+.contact .contact-content {
+  font-size: 2rem;
+}
+
+.contact-logo i {
+  transition: 0.3s;
+}
+
+.contact-logo i {
+  font-size: 4rem;
+  color: white;
+  padding: 0 0.3em;
+}
+
+/* footer */
+
+footer {
+  font-size: 1.6rem;
 }
 
 @media (min-width: 992px) {
@@ -231,6 +276,10 @@ header {
     filter: blur(0);
     transform: translateX(0);
     transform: skew(-15deg);
+  }
+
+  .contact-logo i:hover {
+    text-shadow: 0 0 5px white;
   }
 }
 
