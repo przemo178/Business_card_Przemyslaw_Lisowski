@@ -5,14 +5,12 @@
 }
 
 html {
-  /* font-family: "Oswald", sans-serif; */
-  font-family: "Raleway", sans-serif;
-  /* font-size: 10px; */
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
 body {
+  font-family: "Raleway", sans-serif;
   background-image: linear-gradient(to left, #434343 0%, black 100%);
 }
 
@@ -52,7 +50,6 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  /* background-color: #ccc; */
   background-image: url("../img/milky.jpg");
   background-position: center;
   background-size: cover;
@@ -144,12 +141,10 @@ body {
 .about-img {
   height: 300px;
   object-fit: cover;
-  /* box-shadow: 0 0 10px black; */
 }
 
 .reveal {
   opacity: 0;
-  /* transform: translateY(150px); */
   filter: blur(10%);
   transform: translateX(-100vw);
   transition: all 2s ease;
@@ -158,7 +153,6 @@ body {
 .show {
   opacity: 1;
   filter: blur(0);
-  /* transform: translateY(0); */
   transform: translateX(0);
 }
 
@@ -199,7 +193,6 @@ header {
 
 .projects-info .projects-info-content {
   font-size: 1.6rem;
-  /* text-shadow: 0 0 1px black; */
 }
 
 .projects-info .btn {
@@ -211,7 +204,6 @@ header {
 
 .contact h2 {
   text-transform: uppercase;
-  font-weight: bold;
   font-size: 2.6rem;
 }
 
@@ -246,7 +238,6 @@ footer {
 
   .about-text {
     padding: 5em 0;
-    /* transform: skew(-15deg); */
   }
 
   .about-text-left {
