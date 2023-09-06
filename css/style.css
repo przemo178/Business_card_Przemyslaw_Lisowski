@@ -81,8 +81,7 @@ body {
   text-align: center;
   width: 100%;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  text-shadow: 0 0 2px #ccc;
+  text-shadow: 0 0 2px #fff;
   animation: text 20s linear infinite;
 }
 
@@ -143,17 +142,43 @@ body {
   object-fit: cover;
 }
 
-.reveal {
+.revealFromLeft {
   opacity: 0;
   filter: blur(10%);
   transform: translateX(-100vw);
   transition: all 2s ease;
 }
 
-.show {
+.revealFromRight {
+  opacity: 0;
+  filter: blur(10%);
+  transform: translateX(100vw);
+  transition: all 2s ease;
+}
+
+.revealFromDown {
+  filter: blur(10%);
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.revealFromLeft.showFromLeft {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
+}
+
+.revealFromRight.showFromRight {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.revealFromDown.showFromDown {
+  filter: blur(0);
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* carousel */
@@ -164,7 +189,7 @@ header {
 
 .carousel-item {
   position: relative;
-  height: 300px;
+  height: 500px;
   background-position: center;
   background-size: cover;
   z-index: 0;
@@ -255,19 +280,32 @@ footer {
     transform: skew(-15deg);
   }
 
-  .reveal {
+  .revealFromLeft {
     opacity: 0;
     filter: blur(10%);
     transform: translateX(-100vw);
     transition: all 2s ease;
   }
 
-  .show {
+  /* .revealFromDown {
+    filter: blur(10%);
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+  } */
+
+  .revealFromLeft.showFromLeft {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
     transform: skew(-15deg);
   }
+
+  /* .revealFromDown.showFromDown {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  } */
 
   .contact-logo i:hover {
     text-shadow: 0 0 5px white;
