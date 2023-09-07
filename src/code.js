@@ -7,7 +7,6 @@ document.addEventListener('click', () => {
 })
 
 window.addEventListener('scroll', revealFromLeft);
-window.addEventListener('scroll', revealFromRight);
 window.addEventListener('scroll', revealFromDown);
 
 function revealFromLeft() {
@@ -28,34 +27,16 @@ function revealFromLeft() {
     }
 }
 
-function revealFromRight() {
-    const revealsRight = document.querySelectorAll('.revealFromRight');
-
-    for (let i = 0; i < revealsRight.length; i++) {
-
-        let windowHeight2 = window.innerHeight;
-        let revealTop2 = revealsRight[i].getBoundingClientRect().top;
-        let revealPoint2 = 100;
-
-        if (revealTop2 < windowHeight2 - revealPoint2) {
-            revealsRight[i].classList.add('showFromRight');
-        }
-        else {
-            revealsRight[i].classList.remove('showFromRight');
-        }
-    }
-}
-
 function revealFromDown() {
     const revealsDown = document.querySelectorAll('.revealFromDown');
 
     for (let i = 0; i < revealsDown.length; i++) {
 
-        let windowHeight3 = window.innerHeight;
-        let revealTop3 = revealsDown[i].getBoundingClientRect().top;
-        let revealPoint3 = 100;
+        let windowHeight2 = window.innerHeight;
+        let revealTop2 = revealsDown[i].getBoundingClientRect().top;
+        let revealPoint2 = 100;
 
-        if (revealTop3 < windowHeight3 - revealPoint3) {
+        if (revealTop2 < windowHeight2 - revealPoint2) {
             revealsDown[i].classList.add('showFromDown');
         }
         else {
